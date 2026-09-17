@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Employee Management System</h1>
+    <div class="dashboard">
+
+    <div class="card">
+        <h3>Total Employees</h3>
+        <p id="totalEmployees">0</p>
+    </div>
+
+    <div class="card">
+        <h3>IT Employees</h3>
+        <p id="itEmployees">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Other Employees</h3>
+        <p id="otherEmployees">0</p>
+    </div>
+
+</div>
+
+    <h2>Add Employee</h2>
+    <form id="employeeForm">
+
+    <label>Employee ID:</label>
+    <input type="text" id="employee_id" required><br><br>
+
+    <label>Name:</label>
+    <input type="text" id="name" required><br><br>
+
+    <label>Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label>Phone Number:</label>
+    <input type="text" id="phone" pattern="[0-9]{10}" maxlength="10" required>
+    <label>Department:</label>
+    <input type="text" id="department" required><br><br>
+
+    <label>Designation:</label>
+    <input type="text" id="designation" required><br><br>
+
+    <label>Salary:</label>
+    <input type="number" id="salary" min="1" required>
+    <label>Joining Date:</label>
+    <input type="date" id="joining_date" required><br><br>
+
+    <button type="submit">Add Employee</button>
+
+</form>
+<h2>Employee List</h2>
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search employee..."
+>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th>Salary</th>
+            <th>Joining Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody id="employeeTable">
+    </tbody>
+</table>
+<script src="script.js"></script>
+
+</body>
+</html>
